@@ -25,3 +25,13 @@ def district_sub_counties_list(request, district_id):
         sub_counties = SubCounty.objects.filter(district_id=district_id)
         serializer = SubCountySerializer(sub_counties, many=True)
         return JsonResponse(serializer.data, safe=False)
+
+@csrf_exempt
+def sub_counties_list(request):
+    """
+    List all sub counties.
+    """
+    if request.method == 'GET':
+        sub_counties = SubCounty.objects.all()
+        serializer = SubCountySerializer(sub_counties, many=True)
+        return JsonResponse(serializer.data, safe=False)
