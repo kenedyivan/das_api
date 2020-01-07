@@ -48,6 +48,12 @@ python manage.py runserver
 * [Django](https://laravel.com/) - Web framework
 * [Python](https://www.php.net/) - Programming language
 
+## Running tests
+
+```bash
+python manage.py test
+```
+
 ## Versioning
 
 We use [Git](https://git-scm.com/) and [Github](https://github.com/) for versioning. 
